@@ -1,0 +1,11 @@
+<ul class="product">
+    <li *ngFor="let product of products">
+        <h2>{{product.productName | uppercase}} Details</h2>
+        <table>
+            <tr><td>Id:</td> <td>{{product.productId}}</td></tr>
+            <tr><td>Price:</td> <td>{{product.productPrice}}</td></tr>
+            <tr><td>Stock:</td> <td>{{product.productStock}}</td></tr>
+            <tr><td>Image:</td> <td>{{product.productImage}}</td></tr>
+        </table>
+    </li>
+</ul>

@@ -26,7 +26,10 @@ namespace CoreProductApiTests.AutoFixture
         public void Customize(IFixture fixture)
         {
             var specimenBuilder = new ServiceProviderSpecimenBuilder(_collection.BuildServiceProvider());
-            fixture.Customize(new AutoMoqCustomization(specimenBuilder));
+            fixture.Customize(new AutoMoqCustomization
+            {
+                Relay = specimenBuilder
+            });
 
             fixture.ResidueCollectors.Add(specimenBuilder);
         }

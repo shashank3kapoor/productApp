@@ -19,7 +19,7 @@ namespace CoreProductApiTests.Assertions
             , string? because = null
             , params object[] becauseArgs)
         {
-            var totalProducts = Subject?.ToList().Count();
+            var totalProducts = Subject?.ToList().Count;
 
             Execute.Assertion
                 .ForCondition(totalProducts == expectedNumberOfProducts)
